@@ -26,10 +26,8 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
-            print("returning a cell")
             return cell
         } else {
-            print("empty cell")
             return CategoryCell()
         }
     }
